@@ -1589,7 +1589,7 @@ pre code {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #ffccb8;
+  background-color: ##4800ff;
 }
 
 .table-primary th,
@@ -1600,12 +1600,12 @@ pre code {
 }
 
 .table-hover .table-primary:hover {
-  background-color: #ffba9f;
+  background-color: ##4800ff;
 }
 
 .table-hover .table-primary:hover > td,
 .table-hover .table-primary:hover > th {
-  background-color: #ffba9f;
+  background-color: ##4800ff;
 }
 
 .table-secondary,
@@ -2365,8 +2365,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #FF4800;
-  border-color: #FF4800;
+  background-color: #4800ff;
+  border-color: #4800ff;
 }
 
 .btn-primary:hover {
@@ -2384,8 +2384,8 @@ fieldset:disabled a.btn {
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #FF4800;
-  border-color: #FF4800;
+  background-color: #4800ff;
+  border-color: #4800ff;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
@@ -2660,14 +2660,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #FF4800;
-  border-color: #FF4800;
+  color: #4800ff;
+  border-color: #4800ff;
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #FF4800;
-  border-color: #FF4800;
+  background-color: #4800ff;
+  border-color: #4800ff;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -2675,15 +2675,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #FF4800;
+  color: #4800ff;
   background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #FF4800;
-  border-color: #FF4800;
+  background-color: #4800ff;
+  border-color: #4800ff;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
@@ -9264,7 +9264,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #FF4800 !important;
+  color: #4800ff !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
