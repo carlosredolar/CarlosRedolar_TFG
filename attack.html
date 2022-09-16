@@ -1,379 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Carlos Redolar TFG - Enemy design and game balance</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Game balance, Enemy design, TFG, Game design, Roguelite" name="keywords">
-    <meta content="Carlos Redolar TFG" name="description">
-    <meta content="Carlos Redolar Torres" name="author">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Game balance, Enemy design, TFG, Game design, Roguelite"
+      name="keywords"
+    />
+    <meta content="Carlos Redolar TFG" name="description" />
+    <meta content="Carlos Redolar Torres" name="author" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/48f76e4ac0.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/48f76e4ac0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-envelope mr-2"></i>carlos.redolar.torres@gmail.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!">
-                        <i class="fa fa-envelope"></i>
-                    </a>
-                    <a class="text-white px-2" href="https://www.linkedin.com/in/carlos-redolar/">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="https://github.com/carlosredolar">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="row py-2 px-lg-5">
+        <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center text-white">
+            <small
+              ><i class="fa fa-envelope mr-2"></i
+              >carlos.redolar.torres@gmail.com</small
+            >
+          </div>
         </div>
+        <div class="col-lg-6 text-center text-lg-right">
+          <div class="d-inline-flex align-items-center">
+            <a
+              class="text-white px-2"
+              href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!"
+            >
+              <i class="fa fa-envelope"></i>
+            </a>
+            <a
+              class="text-white px-2"
+              href="https://www.linkedin.com/in/carlos-redolar/"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="text-white px-2" href="https://github.com/carlosredolar">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-lg-5" id="navbarCollapse">
-                <div class="navbar-nav m-auto py-0">
-                    <a href="home.html" class="nav-item nav-link">Home</a>
-		    <div class="nav-item dropdown">
-                        <a href="single.html" class="nav-link dropdown-toggle active" data-toggle="dropdown">Abilities&Behaviours</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="attack.html" class="dropdown-item">Attack type</a>
-			    <a href="movement.html" class="dropdown-item">Movement type</a>
-			    <a href="abilities.html" class="dropdown-item">Extra abilities</a>
-			    <a href="behaviour.html" class="dropdown-item">IA behaviour</a>
-                        </div>
-                    </div>
-                    <a href="enemy.html" class="nav-item nav-link">Enemy design</a>
-                    <a href="balance.html" class="nav-item nav-link">Game Balance</a>                    
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
+      <nav
+        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
+      >
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between px-lg-5"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav m-auto py-0">
+            <a href="home.html" class="nav-item nav-link">Home</a>
+            <div class="nav-item dropdown">
+              <a
+                href="single.html"
+                class="nav-link dropdown-toggle active"
+                data-toggle="dropdown"
+                >Abilities&Behaviours</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="attack.html" class="dropdown-item">Attack type</a>
+                <a href="movement.html" class="dropdown-item">Movement type</a>
+                <a href="abilities.html" class="dropdown-item"
+                  >Extra abilities</a
+                >
+                <a href="behaviour.html" class="dropdown-item">IA behaviour</a>
+              </div>
             </div>
-        </nav>
+            <a href="enemy.html" class="nav-item nav-link">Enemy design</a>
+            <a href="balance.html" class="nav-item nav-link">Game Balance</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
     </div>
     <!-- Navbar End -->
 
-
-
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
-        <div class="container text-center py-5">
-            <h1 class="text-primary display-3">Attack type</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="home.html">Home</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Abilities&Behaviours</p>
-		<i class="fa fa-circle px-3"></i>
-		<p class="m-0"><a class="text-white" href="attack.html">Attack type</a></p>
-            </div>
+      <div class="container text-center py-5">
+        <h1 class="text-primary display-3">Attack type</h1>
+        <div class="d-inline-flex align-items-center text-white">
+          <p class="m-0"><a class="text-white" href="home.html">Home</a></p>
+          <i class="fa fa-circle px-3"></i>
+          <p class="m-0">Abilities&Behaviours</p>
+          <i class="fa fa-circle px-3"></i>
+          <p class="m-0">
+            <a class="text-white" href="attack.html">Attack type</a>
+          </p>
         </div>
+      </div>
     </div>
     <!-- Header End -->
 
-
     <!-- Abilities&Behaviors Start -->
     <div class="container-fluid pt-5">
-        <div class="container">
-		
-            <div class="text-center pb-2">
-                <h1 class="mb-4">Melee Attacks</h1>
-            </div>
-		
-		<div class="container-fluid pt-5">
-	    <div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Basic attacks</h5>
-            </div>
-		<p class="mb-4">Melee attacks are attacks that must be executed at close range, they are the most basic mechanics of an enemy. In this type of attack 
-			we can change their range, speed, cadence and make combinations to create combos and, in this way, differentiate the attacks and the player's 
-			strategy to evade them.</p>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_white_skull.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/hades_gordo_maza.gif" alt="">
-                </div>
-            </div>
-	    <div class="row pb-3">
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/hades_gordete.gif" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/moonlighter_stone_soldier.gif" alt="">
-                </div>
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-	    <div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Charged attacks</h5>
-            </div>
-		<p class="mb-4">Charge attacks are a type of melee attack in which the enemy requires a certain amount of preparation time to make the attack, 
-			usually the enemy stands still for a few seconds and then makes an attack on the player. Generally all attacks have deployment times, 
-			which serve to warn the player of the attacker's intentions. However, there are some enemies that focus on this principle in order to warn 
-			the player well in advance, as their attack is certainly more powerful.</p>
-	    <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_snake.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/hades_calaveras.gif" alt="">
-                </div>
-            </div>
-	    <p class="mb-4">This type of enemy focused on quick and forceful attacks often correlates the charge time with the range and damage of the attacks. 
-			    To help the player detect when such movements are about to occur, the games momentarily change the enemy's expressions, for example by 
-			    changing colour or gesturing in anticipation. In addition, graphical symbols such as exclamations or alerts can be added to denote danger 
-			    to the player.</p>
-	    <div class="row pb-3">
-                <img class="img-fluid w-100" src="gifs/dead_cells_zombie.gif" alt="">
-            </div>
-		</div>
-		
-	<div class="container-fluid pt-5">
-	     <div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Devastating attacks</h5>
-             </div>
-	     <p class="mb-4">Between basic melee attacks and charge attacks, we find blunt attacks. This type of attack, like the charge attack, entails the enemy 
-		     taking longer to deploy by executing animations or remaining static and vulnerable. They can vary from the basic attack in many ways, the most 
-		     conventional being by converting the attack into an area attack to melee or simply maximising the damage of the normal attack.</p>
-	     <div class="row pb-3">
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/moonlighter_slime_gauntlet.gif" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/moonlighter_venomous_tangle.gif" alt="">
-                </div>
-            </div>
-		</div>
-		
-		
-		<div class="container-fluid pt-5">
-	    <div class="text-center pb-2">
-                <h1 class="mb-4">Ranged Attacks</h1>
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-	    <div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Projectiles</h5>
-            </div>
-	    <p class="mb-4">Ranged attacks are long-range attacks, the other basic mechanic of an enemy in a roguelite. In this type of attack, a projectile is 
-		    launched in a straight line to cause damage to the player.</p>
-		<div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_plants.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/dead_cells_archer.gif" alt="">
-                </div>
-            </div>
-		<div class="row pb-3">
-                <img class="img-fluid w-100" src="gifs/hades_witch_projectile.gif" alt="">
-            </div>
-		<p class="mb-4">In this type of attack we can alter its range, speed, cadence or add more projectiles in order to alter the dodge difficulty.</p>
-		<div class="row pb-3">
-			<div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_hole_plants.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/moonlighter_fruit_turret.gif" alt="">
-                </div>
-			</div>
-		<div class="row pb-3">
-                <img class="img-fluid w-100" src="gifs/hades_witch_upgrade.gif" alt="">
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-	    <div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Bouncing projectiles</h5>
-            </div>
-		<p class="mb-4">Some enemies have projectiles with additional characteristics, such as the ability to bounce off obstacles or return to the carrier.</p>
-		<div class="row pb-3">
-                <img class="img-fluid w-100" src="gifs/moonlighter_blade_tree.gif" alt="">
-            </div>
-		<div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_scythe.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/dead_cells_cleaver.gif" alt="">
-                </div>
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-		<div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Sustained beam</h5>
-            </div>
-		<p class="mb-4">Another variant of the ranged attack is the sustained beam, which instead of functioning as a projectile affects an entire stage 
-			line at the same time, creating a division of the map for the duration of this beam.</p>
-		<div class="row pb-3">
-		<div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_laser_bat.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/moonlighter_golem_turret.gif" alt="">
-                </div>
-		</div>
-		<div class="row pb-3">
-                <img class="img-fluid w-100" src="gifs/hades_crystal.gif" alt="">
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-		<div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Trajectory prediction systems</h5>
-            </div>
-		<p class="mb-4">Warning or trajectory prediction systems exist to facilitate dodging certain fast or very long-range abilities. There may be 
-			trajectory indicators that will describe the shape of an enemy's next imminent attack. These warnings are used in attacks by some enemies 
-			that deploy a large number of projectiles, with very fast attacks or abilities with such a large area of effect that they would be impossible 
-			to dodge if not forewarned by such indicators.</p>
-		<div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_wind_elemental.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/dead_cells_blowgunner.gif" alt="">
-                </div>
-            </div>
-		<div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/archero_laser_bat.gif" alt="">
-                </div>
-                <div class="col-lg-8 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/hades_lava_circles.gif" alt="">
-                </div>
-            </div>
-		</div>
-		
-		
-		<div class="container-fluid pt-5">
-	    <div class="text-center pb-2">
-                <h1 class="mb-4">Area Of Effect Attacks</h1>
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-		<div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Damage attacks</h5>
-            </div>
-		<p class="mb-4">Area attacks can be found in both melee and ranged attacks, they are just variants of these attacks that have effect and damage in 
-			larger areas. Within the area attacks we can find the typical explosive attacks or melee attacks in cone effect.</p>
-		<div class="row pb-3">
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/hades_bombardero.gif" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/dead_cells_bombardero.gif" alt="">
-                </div>
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-		<div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Debuff attacks</h5>
-            </div>
-		<p class="mb-4">Although we can also find abilities such as debuff puddles, poisons and other non-mechanical variants based on direct damage. 
-			Enemies with these types of attacks or abilities are necessary to reduce the player's abilities during combat.</p>
-		<div class="row pb-3">
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/moonlighter_landscaper.gif" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/moonlighter_lava_catapult.gif" alt="">
-                </div>
-            </div>
-		</div>
-		
-		
-		<div class="container-fluid pt-5">
-	<div class="text-center pb-2">
-                <h1 class="mb-4">Support Abilities</h1>
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-		<div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Protection</h5>
-            </div>
-		<p class="mb-4">Enemies with support functions do not usually have offensive abilities, so their main mechanic has a defensive function. The main 
-			role of these enemies is to support the performance of other enemies and increase the difficulty. Defensive abilities include the ability 
-			to generate shields, heal allies or improve some stats.</p>
-		<div class="row pb-3">
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/hades_inmune_crystal.gif" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6 text-center mb-5">
-                    <img class="img-fluid w-100" src="gifs/dead_cells_protector.gif" alt="">
-                </div>
-            </div>
-		</div>
-		
-		<div class="container-fluid pt-5">
-		<div class="text-center pb-2">
-                <h5 class="text-primary text-uppercase font-weight-bold">Summoners</h5>
-            </div>
-		<p class="mb-4">Within the support role we could add summoning enemies. They are usually secondary enemies, without great attack and defence stats, 
-			but whose function is to generate long-term challenges, as they summon other known enemies over time. Summoner enemies are recurring in a 
-			Roguelite in order to generate a large number of enemies during combat. In addition to offering the dilemma of long-term strategy, they offer 
-			the ability to contextualise the reuse of enemies in a level.</p>
-		<div class="row pb-3">
-                    <img class="img-fluid w-100" src="gifs/hades_skullomat.gif" alt="">
-		</div>
-		</div>
-
+      <div class="container">
+        <div class="text-center pb-2">
+          <h1 class="mb-4">Melee Attacks</h1>
         </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Basic attacks
+            </h5>
+          </div>
+          <p class="mb-4">
+            Melee attacks are attacks that must be executed at close range, they
+            are the most basic mechanics of an enemy. In this type of attack we
+            can change their range, speed, cadence and make combinations to
+            create combos and, in this way, differentiate the attacks and the
+            player's strategy to evade them.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_white_skull.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/hades_gordo_maza.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/hades_gordete.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_stone_soldier.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Charged attacks
+            </h5>
+          </div>
+          <p class="mb-4">
+            Charge attacks are a type of melee attack in which the enemy
+            requires a certain amount of preparation time to make the attack,
+            usually the enemy stands still for a few seconds and then makes an
+            attack on the player. Generally all attacks have deployment times,
+            which serve to warn the player of the attacker's intentions.
+            However, there are some enemies that focus on this principle in
+            order to warn the player well in advance, as their attack is
+            certainly more powerful.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_snake.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/hades_calaveras.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <p class="mb-4">
+            This type of enemy focused on quick and forceful attacks often
+            correlates the charge time with the range and damage of the attacks.
+            To help the player detect when such movements are about to occur,
+            the games momentarily change the enemy's expressions, for example by
+            changing colour or gesturing in anticipation. In addition, graphical
+            symbols such as exclamations or alerts can be added to denote danger
+            to the player.
+          </p>
+          <div class="row pb-3">
+            <img
+              class="img-fluid w-100"
+              src="gifs/dead_cells_zombie.gif"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Devastating attacks
+            </h5>
+          </div>
+          <p class="mb-4">
+            Between basic melee attacks and charge attacks, we find blunt
+            attacks. This type of attack, like the charge attack, entails the
+            enemy taking longer to deploy by executing animations or remaining
+            static and vulnerable. They can vary from the basic attack in many
+            ways, the most conventional being by converting the attack into an
+            area attack to melee or simply maximising the damage of the normal
+            attack.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_slime_gauntlet.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_venomous_tangle.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h1 class="mb-4">Ranged Attacks</h1>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Projectiles
+            </h5>
+          </div>
+          <p class="mb-4">
+            Ranged attacks are long-range attacks, the other basic mechanic of
+            an enemy in a roguelite. In this type of attack, a projectile is
+            launched in a straight line to cause damage to the player.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_plants.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/dead_cells_archer.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row pb-3">
+            <img
+              class="img-fluid w-100"
+              src="gifs/hades_witch_projectile.gif"
+              alt=""
+            />
+          </div>
+          <p class="mb-4">
+            In this type of attack we can alter its range, speed, cadence or add
+            more projectiles in order to alter the dodge difficulty.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_hole_plants.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_fruit_turret.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row pb-3">
+            <img
+              class="img-fluid w-100"
+              src="gifs/hades_witch_upgrade.gif"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Bouncing projectiles
+            </h5>
+          </div>
+          <p class="mb-4">
+            Some enemies have projectiles with additional characteristics, such
+            as the ability to bounce off obstacles or return to the carrier.
+          </p>
+          <div class="row pb-3">
+            <img
+              class="img-fluid w-100"
+              src="gifs/moonlighter_blade_tree.gif"
+              alt=""
+            />
+          </div>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_scythe.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/dead_cells_cleaver.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Sustained beam
+            </h5>
+          </div>
+          <p class="mb-4">
+            Another variant of the ranged attack is the sustained beam, which
+            instead of functioning as a projectile affects an entire stage line
+            at the same time, creating a division of the map for the duration of
+            this beam.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_laser_bat.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_golem_turret.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row pb-3">
+            <img class="img-fluid w-100" src="gifs/hades_crystal.gif" alt="" />
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Trajectory prediction systems
+            </h5>
+          </div>
+          <p class="mb-4">
+            Warning or trajectory prediction systems exist to facilitate dodging
+            certain fast or very long-range abilities. There may be trajectory
+            indicators that will describe the shape of an enemy's next imminent
+            attack. These warnings are used in attacks by some enemies that
+            deploy a large number of projectiles, with very fast attacks or
+            abilities with such a large area of effect that they would be
+            impossible to dodge if not forewarned by such indicators.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_wind_elemental.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/dead_cells_blowgunner.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row pb-3">
+            <div class="col-lg-4 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/archero_laser_bat.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-8 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/hades_lava_circles.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h1 class="mb-4">Area Of Effect Attacks</h1>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Damage attacks
+            </h5>
+          </div>
+          <p class="mb-4">
+            Area attacks can be found in both melee and ranged attacks, they are
+            just variants of these attacks that have effect and damage in larger
+            areas. Within the area attacks we can find the typical explosive
+            attacks or melee attacks in cone effect.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/hades_bombardero.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/dead_cells_bombardero.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Debuff attacks
+            </h5>
+          </div>
+          <p class="mb-4">
+            Although we can also find abilities such as debuff puddles, poisons
+            and other non-mechanical variants based on direct damage. Enemies
+            with these types of attacks or abilities are necessary to reduce the
+            player's abilities during combat.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_landscaper.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_lava_catapult.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h1 class="mb-4">Support Abilities</h1>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Protection
+            </h5>
+          </div>
+          <p class="mb-4">
+            Enemies with support functions do not usually have offensive
+            abilities, so their main mechanic has a defensive function. The main
+            role of these enemies is to support the performance of other enemies
+            and increase the difficulty. Defensive abilities include the ability
+            to generate shields, heal allies or improve some stats.
+          </p>
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/hades_inmune_crystal.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/dead_cells_protector.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+          <div class="text-center pb-2">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Summoners
+            </h5>
+          </div>
+          <p class="mb-4">
+            Within the support role we could add summoning enemies. They are
+            usually secondary enemies, without great attack and defence stats,
+            but whose function is to generate long-term challenges, as they
+            summon other known enemies over time. Summoner enemies are recurring
+            in a Roguelite in order to generate a large number of enemies during
+            combat. In addition to offering the dilemma of long-term strategy,
+            they offer the ability to contextualise the reuse of enemies in a
+            level.
+          </p>
+          <div class="row pb-3">
+            <img
+              class="img-fluid w-100"
+              src="gifs/hades_skullomat.gif"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Abilities&Behaviors End -->
-	
-   
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-3 py-3 px-sm-1 px-md-3">
-        <div class="row pt-2">
-            <div class="container text-center py-5">
-                <h3 class="text-primary mb-4">Contact</h3>
-                    <p><i class="fa fa-envelope mr-2"></i>carlos.redolar.torres@gmail.com</p>
-                    <a class="btn btn-outline-light btn-social mr-2" href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!"><i class="fa fa-envelope"></i></a>
-                    <a class="btn btn-outline-light btn-social mr-2" href="https://www.linkedin.com/in/carlos-redolar/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mr-2" href="https://github.com/carlosredolar"><i class="fab fa-github"></i></a>
-            </div>
+      <div class="row pt-2">
+        <div class="container text-center py-5">
+          <h3 class="text-primary mb-4">Contact</h3>
+          <p>
+            <i class="fa fa-envelope mr-2"></i>carlos.redolar.torres@gmail.com
+          </p>
+          <a
+            class="btn btn-outline-light btn-social mr-2"
+            href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!"
+            ><i class="fa fa-envelope"></i
+          ></a>
+          <a
+            class="btn btn-outline-light btn-social mr-2"
+            href="https://www.linkedin.com/in/carlos-redolar/"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-outline-light btn-social mr-2"
+            href="https://github.com/carlosredolar"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -389,6 +635,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
