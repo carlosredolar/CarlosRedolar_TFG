@@ -122,15 +122,775 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
       <div class="container text-center py-5">
-        <h1 class="text-primary display-3">Enemy creator</h1>
+        <h1 class="text-primary display-3">Enemy design</h1>
         <div class="d-inline-flex align-items-center text-white">
           <p class="m-0"><a class="text-white" href="home.html">Home</a></p>
           <i class="fa fa-circle px-3"></i>
-          <p class="m-0">Enemy creator</p>
+          <p class="m-0">Enemy design</p>
         </div>
       </div>
     </div>
     <!-- Header End -->
+
+    <!-- Abilities&Behaviors Start -->
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="text-center pb-2">
+          <h1 class="mb-4">Introduction</h1>
+        </div>
+        <p class="mb-4 pb-5">
+          This section is primarily intended to assist in the early stages of
+          Roguelite enemy design. It focuses in particular on the initial
+          approach to enemy objectives and mechanics, as well as a series of
+          tips to guide the moment of implementation, and information on how
+          challenges evolve. It completely disregards the artistic side of enemy
+          design or story.
+        </p>
+
+        <div class="text-center pb-2">
+          <h1 class="mb-4">Player actions</h1>
+        </div>
+        <p class="mb-4">
+          When designing enemies, we must keep in mind that in a Roguelite they
+          are the main challenge for the player. Therefore, the gameplay
+          mechanics available to the player in each game should be the starting
+          point for designing these challenges.
+        </p>
+        <p class="mb-4">
+          The player has a number of mechanics at his disposal, which result in
+          the different actions of the player in the game. First we ask
+          ourselves the question: "What do we want the player to do? The common
+          answers in Roguelites to this question revolve around dodging attacks.
+          From what we have seen and analysed throughout this work we can
+          differentiate between 4 types of actions on the part of the player:
+        </p>
+        <ul class="list-inline pl-5 pb-3">
+          <li>
+            <h7><i class="far fa-dot-circle text-grey mr-2"></i>Kite</h7>
+          </li>
+          <li>
+            <h7
+              ><i class="far fa-dot-circle text-grey mr-2"></i>Normal dodges</h7
+            >
+          </li>
+          <li>
+            <h7
+              ><i class="far fa-dot-circle text-grey mr-2"></i>Special
+              dodges</h7
+            >
+          </li>
+          <li>
+            <h7><i class="far fa-dot-circle text-grey mr-2"></i>Timing</h7>
+          </li>
+        </ul>
+
+        <div class="container-fluid pt-2">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold">Kite</h5>
+          </div>
+        </div>
+        <div class="container-fluid pt-2">
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5">
+              <p class="mb-4">
+                Kiting is a concept used in video games to refer to the action
+                of attacking while keeping your distance from an enemy. The main
+                objective of this action is to inflict damage on our enemies
+                from a relatively safe position, as we move in the opposite
+                direction to the enemy.
+              </p>
+              <p class="mb-4">
+                Generally, melee enemies chasing the player incite this type of
+                action. However, more evasive ranged enemies can generate the
+                opposite, with the enemy now "kite" the player, and the player
+                becoming the pursuer.
+              </p>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img class="img-fluid w-50" src="gifs/archero_snake.gif" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-2">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Normal dodges
+            </h5>
+          </div>
+        </div>
+        <div class="container-fluid pt-2">
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5">
+              <p class="mb-4">
+                We refer to normal dodges as those dodges that can be performed
+                by the player's basic movement or by using the terrain, without
+                the need to use any special ability (action with cooldown time)
+                of the character.
+              </p>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-50"
+                src="gifs/archero_plants.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-2">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Special dodges
+            </h5>
+          </div>
+        </div>
+        <div class="container-fluid pt-2">
+          <div class="row pb-3">
+            <p class="mb-4">
+              Special dodges are different from the previous ones in that they
+              depend on the use of some additional mechanic. In this group we
+              find mechanics such as: jumps, crouching, dashes, shields, etc.
+            </p>
+          </div>
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/hades_skullcrasher.gif"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/moonlighter_golem_head.gif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5">
+              <p class="mb-4">
+                Enemies with ranged projectile-type attacks are the ones that
+                force the player to dodge the most. However, it will depend on
+                the parameters of the attack, such as projectile speed, which
+                will determine whether the dodge should be performed with the
+                basic move or with some additional mechanic.
+              </p>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center mb-5">
+              <img
+                class="img-fluid w-100"
+                src="gifs/dead_cells_cleaver.gif"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-2">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold">Timing</h5>
+          </div>
+        </div>
+        <div class="container-fluid pt-2">
+          <div class="row pb-3">
+            <p class="mb-4">
+              Timing dodges are time-related dodges. While it is true that every
+              dodge depends on doing it correctly in a time interval, this
+              category is exclusively reserved for a type of dodge with a very
+              narrow window of opportunity to perform them. Generally in this
+              group we find the "parries", a mechanic to completely block damage
+              or even return it, which must be very precise at the moment of
+              receiving the attack.
+            </p>
+            <p class="mb-4">
+              As we progress through the Roguelite games, we can see that the
+              deployment times of attacks and the player's windows of
+              opportunity become much shorter, so that by the final stages of
+              all the games analysed we find that all the previous dodging
+              actions begin to blend in with this group.
+            </p>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-2">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold">
+              Challenges
+            </h5>
+          </div>
+        </div>
+        <div class="container-fluid pt-2">
+          <div class="row pb-3">
+            <p class="mb-4">
+              We have already seen the type of actions that the enemies of this
+              genre of videogames want to generate in the player, so we divide
+              the challenges into parts to be analysed separately: spatial
+              challenges and temporal challenges.
+            </p>
+            <p class="mb-4">
+              The primarily spatial challenges will be those that focus on the
+              player having good battlespace management. Enemies focused on this
+              type of challenge have attacks that limit the player's movement,
+              either by dividing the map, creating danger zones, or forcing the
+              player to anticipate projectile trajectories.
+            </p>
+            <p class="mb-4">
+              Time-based challenges, on the other hand, are those that focus on
+              the player's time management of actions during combat. Enemies
+              focused on generating these challenges have quick attacks, leaving
+              little time for the player to react to them.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center pb-2">
+          <h1 class="mb-4">Enemy creation</h1>
+        </div>
+        <p class="mb-4">
+          In this work we have collected a large number of different mechanics
+          that make up an enemy of the Roguelite genre. As these are divided
+          into 4 groups, the easiest way to create an enemy is to choose one (or
+          several) mechanics from each group to fit the type of challenge we
+          wanted to propose to the player in the previous point.
+        </p>
+        <p class="mb-4">
+          In this work we have reverse-engineered the enemies, breaking them
+          down to extract common factors, so that once the basic mechanics have
+          been obtained and isolated we can put them together to build new
+          enemies. As an example, several enemies are described below:
+        </p>
+        <div class="container-fluid pt-2">
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5 pl-5">
+              <h5 class="text-dark text-uppercase font-weight-bold pb-2">
+                Longspear (Hades)
+              </h5>
+              <ul class="list-inline pl-5">
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>Terrain
+                    interaction: Gorunded, dash</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>AI
+                    behaviour: Chase</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>Attack:
+                    Melee, charged attack</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>Extra
+                    abilities: Ability upon death, revive</h7
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5">
+              <img
+                class="img-fluid w-20"
+                src="img/hades_longspear.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid pt-2">
+          <div class="row pb-3">
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5 pl-5">
+              <h5 class="text-dark text-uppercase font-weight-bold pb-2">
+                Inferno-bomber (Hades)
+              </h5>
+              <ul class="list-inline pl-5">
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>Terrain
+                    interaction: Gorunded, jump</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>AI
+                    behaviour: Chase</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>Attack:
+                    Ranged, area of effect, damage</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2"></i>Extra
+                    abilities: Ability upon death, damage</h7
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 text-lg-left mb-5">
+              <img
+                class="img-fluid w-20"
+                src="img/hades_bombardero.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid pt-2">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold pb-3">
+              Assembly
+            </h5>
+          </div>
+
+          <ul class="list-inline pl-5 pb-5">
+            <li>
+              <h6>
+                <i class="far fa-dot-circle text-dark mr-2 pb-3"></i>Terrain
+                interaction
+              </h6>
+              <ul class="list-inline pl-5">
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Flight</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Grounded</h7
+                  >
+                  <ul class="list-inline pl-5">
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Run</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Jump</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Dash</h7
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h6>
+                <i class="far fa-dot-circle text-dark mr-2 pb-3"></i>AI
+                behaviour
+              </h6>
+              <ul class="list-inline pl-5">
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Chase</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Patrol</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Static</h7
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h6>
+                <i class="far fa-dot-circle text-dark mr-2 pb-3"></i>Attack &
+                Abilities
+              </h6>
+              <ul class="list-inline pl-5">
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Melee</h7
+                  >
+                  <ul class="list-inline pl-5">
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i>Basic
+                        attacks</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Charged attacks</h7
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Ranged</h7
+                  >
+                  <ul class="list-inline pl-5">
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Projectiles</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Special projectiles</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Sustained beams</h7
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Area
+                    Of Effect</h7
+                  >
+                  <ul class="list-inline pl-5">
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i>Damage
+                        areas</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i>Debuff
+                        areas</h7
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Support abilities</h7
+                  >
+                  <ul class="list-inline pl-5">
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Protection</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >summoning</h7
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h6>
+                <i class="far fa-dot-circle text-dark mr-2 pb-3"></i>Extra
+                abilities
+              </h6>
+              <ul class="list-inline pl-5">
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Strengths & Weaknesses</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Connection abilities</h7
+                  >
+                </li>
+                <li>
+                  <h7
+                    ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i
+                    >Abilities upon death</h7
+                  >
+                  <ul class="list-inline pl-5">
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Damage</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Revive</h7
+                      >
+                    </li>
+                    <li>
+                      <h7
+                        ><i class="far fa-circle text-grey mr-2 pb-3"></i
+                        >Summoning</h7
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="container-fluid pt-2 pb-5">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold pb-3">
+              Parameterisation of enemies
+            </h5>
+          </div>
+          <p>
+            As we have already seen, enemies constitute different challenges
+            throughout the game. These challenges, even taking all of the above
+            into account, can still be designed with a difficulty that is
+            inappropriate to the level at which they are encountered. These
+            problems with the balance of the game systems would become part of
+            the balance of the game, not the design. However, while designing
+            our enemies we can parameterise certain mechanics from the start in
+            order to facilitate playtesting and balancing later on.
+          </p>
+          <p>
+            Having said that, all enemies we design should have the following
+            parameters in order to nerf and buff them with ease, allowing us to
+            make substantial changes to the mechanics without the need for
+            additional programming. The common parameters found in this analysis
+            are:
+          </p>
+          <ul class="list-inline pl-5">
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Sight
+                range</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Attack
+                range</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Attack
+                deployment time*</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Attack
+                parameters**</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Time
+                between attacks</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Resting
+                time***</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Move
+                speed</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Time of
+                trajectory calculation****</h7
+              >
+            </li>
+          </ul>
+          <p>
+            * The deployment time of the attack is the time it takes for the
+            enemy to perform the attack, in the case of charged attacks this
+            time is very relevant to the balance of the mechanics. In the case
+            of less forceful attacks it is still present, even if it is minimal.
+          </p>
+          <p>
+            **When we refer to the parameters of the attack itself, we mean to
+            summarise the number of parameters of the attack mechanics. In the
+            case of an enemy with cone projectiles, the parameters would be the
+            number of projectiles, the angle of dispersion, the speed of the
+            projectiles, and so on. Therefore, the number of parameters to be
+            taken into account in this category will depend on the particular
+            mechanics.
+          </p>
+          <p>
+            ***Rest time is the time it takes for an enemy to recover from their
+            attack. While it is true that most enemies with basic attacks do not
+            have this, most enemies with charged attacks have pauses in their
+            actions such as movement at the end of the attack. This time
+            interval is useful to let the player rest after each challenge, so
+            we can add it to any enemy to a greater or lesser extent.
+          </p>
+          <p>
+            **** Again, this refers to charged attacks, but can also be
+            extrapolated to projectile calculations. Within the range of time it
+            takes for an enemy to charge the attack, the moment of trajectory
+            calculation determines the difficulty of dodging, being more
+            difficult the closer it is to the moment of launch.
+          </p>
+        </div>
+
+        <div class="text-center pb-2">
+          <h1 class="mb-4">Challenges evolutions</h1>
+        </div>
+        <p class="pb-4">
+          When we want to design variations of the same enemy that challenge the
+          player more, we count what we call quantitative and qualitative
+          expansions. Instead of making an enemy more difficult based on the
+          basic numbers of its mechanics, such as health, damage or speed,
+          expansions make the previous challenge more difficult in a more
+          imaginative way.
+        </p>
+        <div class="container-fluid pt-2 pb-5">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold pb-2">
+              Quantitative evolutions
+            </h5>
+          </div>
+          <p>
+            A quantitative expansion is simply the achievement of the same
+            challenge repeatedly. This expansion can occur in both the number of
+            enemies and the number of mechanics. For example:
+          </p>
+          <ul class="list-inline pl-5">
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Challenge
+                1: 1 enemy shots 1 projectile</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Challenge
+                2 (Type 1 evolution): 2 enemy shots 1 projectile</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Challenge
+                3 (Type 2 evolution): 1 enemy shots 2 projectiles</h7
+              >
+            </li>
+          </ul>
+          <p>
+            In both cases we have the same mechanics repeated in order to
+            increase the difficulty of the previous challenge. These types of
+            expansions are very easy to add to our game and are a good tool used
+            in all Roguelites.
+          </p>
+        </div>
+        <div class="container-fluid pt-2 pb-5">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold pb-2">
+              Qualitative evolutions
+            </h5>
+          </div>
+          <p>
+            A qualitative expansion is the creative evolution of a challenge.
+            This expansion requires a full understanding of the challenge and
+            the mechanics involved in order to change it to increase its
+            difficulty. Example:
+          </p>
+          <ul class="list-inline pl-5">
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Challenge
+                1: 1 enemy shots 1 projectile</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Challenge
+                2 (1st evolution): 1 enemy shots a sustained beam</h7
+              >
+            </li>
+            <li>
+              <h7
+                ><i class="far fa-dot-circle text-grey mr-2 pb-3"></i>Challenge
+                3 (2nd evolution): 1 enemy shots a sustained beam and
+                rotates</h7
+              >
+            </li>
+          </ul>
+          <p>
+            In this example we can see how the projectile mechanic, which used
+            to make the player dodge in one direction or the other, has become a
+            slightly different mechanic. In this variation of the basic enemy
+            mechanic, the player's decision to dodge left or right is now more
+            relevant, as they will be exposed to that challenge for a longer
+            period of time.
+          </p>
+          <p>
+            The downside of this type of expansion is that it requires more
+            understanding and creativity. Also, sometimes a whole mechanic is
+            redone, so it requires more production and programming work.
+          </p>
+        </div>
+        <div class="container-fluid pt-2 pb-5">
+          <div class="text-center pb-4">
+            <h5 class="text-primary text-uppercase font-weight-bold pb-2">
+              Time expansions
+            </h5>
+          </div>
+          <p>
+            The last way to increase the difficulty of a challenge is to
+            increase the time of exposure to the challenge. Challenges are seen
+            as certain actions that the player must perform and overcome between
+            gaps of relative safety, so increasing the time between gaps of
+            safety creates longer and therefore more difficult challenges. For
+            example, it will be more difficult for the player to maintain the
+            concentration of dodging consecutive bullets for 1 minute than it
+            would be for 10 seconds.
+          </p>
+          <p>
+            In this type of expansion, factors such as fatigue come into play,
+            as the player, having already mastered the mechanics, may have
+            lapses in concentration and execution over longer intervals of time.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Abilities&Behaviors End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-3 py-3 px-sm-1 px-md-3">
