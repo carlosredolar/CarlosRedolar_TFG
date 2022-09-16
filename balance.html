@@ -1,120 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Carlos Redolar TFG - Enemy design and game balance</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Game balance, Enemy design, TFG, Game design, Roguelite" name="keywords">
-    <meta content="Carlos Redolar TFG" name="description">
-    <meta content="Carlos Redolar Torres" name="author">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Game balance, Enemy design, TFG, Game design, Roguelite"
+      name="keywords"
+    />
+    <meta content="Carlos Redolar TFG" name="description" />
+    <meta content="Carlos Redolar Torres" name="author" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/48f76e4ac0.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/48f76e4ac0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-envelope mr-2"></i>carlos.redolar.torres@gmail.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!">
-                        <i class="fa fa-envelope"></i>
-                    </a>
-                    <a class="text-white px-2" href="https://www.linkedin.com/in/carlos-redolar/">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="https://github.com/carlosredolar">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="row py-2 px-lg-5">
+        <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center text-white">
+            <small
+              ><i class="fa fa-envelope mr-2"></i
+              >carlos.redolar.torres@gmail.com</small
+            >
+          </div>
         </div>
+        <div class="col-lg-6 text-center text-lg-right">
+          <div class="d-inline-flex align-items-center">
+            <a
+              class="text-white px-2"
+              href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!"
+            >
+              <i class="fa fa-envelope"></i>
+            </a>
+            <a
+              class="text-white px-2"
+              href="https://www.linkedin.com/in/carlos-redolar/"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="text-white px-2" href="https://github.com/carlosredolar">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between px-lg-5" id="navbarCollapse">
-                <div class="navbar-nav m-auto py-0">
-                    <a href="home.html" class="nav-item nav-link">Home</a>
-		    <div class="nav-item dropdown">
-                        <a href="single.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Abilities&Behaviours</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="attack.html" class="dropdown-item">Attack type</a>
-			    <a href="movement.html" class="dropdown-item">Movement type</a>
-			    <a href="abilities.html" class="dropdown-item">Extra abilities</a>
-			    <a href="behaviour.html" class="dropdown-item">IA behaviour</a>
-                        </div>
-                    </div>
-                    <a href="enemy.html" class="nav-item nav-link">Enemy design</a>
-                    <a href="balance.html" class="nav-item nav-link active">Game Balance</a>                    
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
+      <nav
+        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
+      >
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between px-lg-5"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav m-auto py-0">
+            <a href="home.html" class="nav-item nav-link">Home</a>
+            <div class="nav-item dropdown">
+              <a
+                href="single.html"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                >Abilities&Behaviours</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="attack.html" class="dropdown-item">Attack type</a>
+                <a href="movement.html" class="dropdown-item">Movement type</a>
+                <a href="abilities.html" class="dropdown-item"
+                  >Extra abilities</a
+                >
+                <a href="behaviour.html" class="dropdown-item">AI behaviour</a>
+              </div>
             </div>
-        </nav>
+            <a href="enemy.html" class="nav-item nav-link">Enemy design</a>
+            <a href="balance.html" class="nav-item nav-link active"
+              >Game Balance</a
+            >
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
     </div>
     <!-- Navbar End -->
 
-
-
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
-        <div class="container text-center py-5">
-            <h1 class="text-primary display-3">Game balance</h1>
-            <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="home.html">Home</a></p>
-                <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Game balance</p>
-            </div>
+      <div class="container text-center py-5">
+        <h1 class="text-primary display-3">Game balance</h1>
+        <div class="d-inline-flex align-items-center text-white">
+          <p class="m-0"><a class="text-white" href="home.html">Home</a></p>
+          <i class="fa fa-circle px-3"></i>
+          <p class="m-0">Game balance</p>
         </div>
+      </div>
     </div>
     <!-- Header End -->
 
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-3 py-3 px-sm-1 px-md-3">
-        <div class="row pt-2">
-            <div class="container text-center py-5">
-                <h3 class="text-primary mb-4">Contact</h3>
-                    <p><i class="fa fa-envelope mr-2"></i>carlos.redolar.torres@gmail.com</p>
-                    <a class="btn btn-outline-light btn-social mr-2" href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!"><i class="fa fa-envelope"></i></a>
-                    <a class="btn btn-outline-light btn-social mr-2" href="https://www.linkedin.com/in/carlos-redolar/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mr-2" href="https://github.com/carlosredolar"><i class="fab fa-github"></i></a>
-            </div>
+      <div class="row pt-2">
+        <div class="container text-center py-5">
+          <h3 class="text-primary mb-4">Contact</h3>
+          <p>
+            <i class="fa fa-envelope mr-2"></i>carlos.redolar.torres@gmail.com
+          </p>
+          <a
+            class="btn btn-outline-light btn-social mr-2"
+            href="mailto:carlos.redolar.torres@gmail.com?Subject=Hey!"
+            ><i class="fa fa-envelope"></i
+          ></a>
+          <a
+            class="btn btn-outline-light btn-social mr-2"
+            href="https://www.linkedin.com/in/carlos-redolar/"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-outline-light btn-social mr-2"
+            href="https://github.com/carlosredolar"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -130,6 +179,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
